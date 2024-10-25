@@ -1,5 +1,5 @@
-nmae: ping the server
-hosts: mongodb
-tasks:
-  - name: ping the server 
-    ansible.builtin.ping:
+- name: ping the server
+  hosts: mongodb
+  tasks:
+    - name: ping the server 
+      ansible.builtin.ping:
