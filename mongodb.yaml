@@ -1,0 +1,25 @@
+- name: install mongodb
+  hosts: mongodb
+  tasks:
+    - name: copy repo
+      ansible.builtin.copy:
+        src:
+        dest:
+    - name: install mongodb
+      ansible.builtin.yum:
+        name: mongodb-org -y
+    - name: starting and enabling serice
+      ansible.builtin.service:
+        name: mongod
+        state: started
+        enabled: yes
+    - nmae: replacing text
+      ansible.builtin.replace:
+        path: 
+        regexp:
+        replace:  
+    - name: restart service
+      ansible.builtin.service:
+        name: mongod
+        state: restarted
+    
